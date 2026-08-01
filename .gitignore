@@ -1,0 +1,25 @@
+# Node dependencies
+node_modules/
+
+# Static MakeCode editor copied from the PXT target
+editor/
+
+# Generated portable application
+portable/
+
+# Generated Forge output
+out/
+
+# Generated release ZIP files
+release/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Windows files
+Thumbs.db
+Desktop.ini
+
+# Visual Studio Code settings
+.vscode/
