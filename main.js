@@ -352,7 +352,7 @@ function createMainWindow(editorOrigin) {
         height: 950,
         minWidth: 1100,
         minHeight: 700,
-        title: "XC_GUI MakeCode",
+        title: `Microsoft MakeCode for micro:bit with XC GUI v${app.getVersion()}`,
 
         webPreferences: {
             partition:
@@ -363,6 +363,16 @@ function createMainWindow(editorOrigin) {
             sandbox: true
         }
     });
+
+    mainWindow.on(
+        "page-title-updated",
+        event => {
+            event.preventDefault();
+            mainWindow.setTitle(
+                `Microsoft MakeCode for micro:bit with XC GUI v${app.getVersion()}`
+            );
+        }
+    );
 
     const editorUrl =
         `${editorOrigin}/xcgui/index.html`;
